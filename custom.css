@@ -1,1 +1,95 @@
 /* Night coding session - Day 1 */
+/* Night coding vibes */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.container {
+  background: #2d2d2d;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+p {
+  text-align: center;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+
+.controls,
+.checkboxes {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+input[type="range"] {
+  flex: 1;
+  min-width: 200px;
+}
+
+button {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #005c99;
+}
+
+.output {
+  display: flex;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+#password {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+.strength {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.very-weak,
+.weak {
+  background: #ff4757;
+}
+.fair {
+  background: #ffa726;
+}
+.good {
+  background: #66bb6a;
+}
+.strong {
+  background: #26a69a;
+}
