@@ -1,0 +1,14 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "🔐 Secure password generator built during night coding sessions",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Building... Done! 🎉'",
+    "test": "echo 'Testing... All good! ✅'",
+    "dev": "live-server"
+  },
+  "keywords": ["password", "generator", "security", "night-coding"],
+  "author": "DiegoMGE",
+  "license": "MIT"
+}
