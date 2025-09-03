@@ -1,5 +1,9 @@
 /* Night coding session - Day 1 */
-/* Night coding vibes */
+* {
+  box-sizing: border-box;
+  border: 1px solid gray;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   max-width: 500px;
