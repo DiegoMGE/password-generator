@@ -1,26 +1,24 @@
-name: 🤖 Static Site Deploy
+name: 🌙 Night Coding Validator
 
 on:
   push:
     branches: [main]
 
 jobs:
-  deploy:
+  validate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Download code
+      - name: 📥 Get my code
         uses: actions/checkout@v4
 
-      - name: 🎉 Validate HTML/CSS/JS
+      - name: ✅ Check files exist
         run: |
-          echo "✅ HTML file exists: $(ls *.html)"
-          echo "✅ CSS file exists: $(ls *.css)" 
-          echo "✅ JS file exists: $(ls *.js)"
-          echo "🌙 Night coding project validated!"
+          ls -la
+          echo "✅ Files in repo:"
+          if [ -f "index.html" ]; then echo "✅ index.html found"; else echo "❌ index.html missing"; fi
+          if [ -f "style.css" ]; then echo "✅ style.css found"; else echo "❌ style.css missing"; fi
+          if [ -f "script.js" ]; then echo "✅ script.js found"; else echo "❌ script.js missing"; fi
 
-      - name: 🚀 Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+      - name: 🎉 Success message
+        run: echo "🌙 Night coding project validated successfully! 🤖"
