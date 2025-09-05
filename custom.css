@@ -97,3 +97,8 @@ button:hover {
 .strong {
   background: #26a69a;
 }
+
+.cnt-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}

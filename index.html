@@ -10,12 +10,15 @@
 
 <body>
     <div class="container">
-        <h1>🔐 Secure Password Generator</h1>
-        <p>Built during night coding sessions 🌙</p>
+        <h1>Generate Password</h1>
+
+        <div class="output">
+            <input type="text" id="password" readonly>
+        </div>
 
         <div class="controls">
-            <label>Length: <input type="range" id="length" min="8" max="64" value="16"></label>
-            <span id="lengthValue">16</span>
+            <label><span id="lengthValue">16</span> characters: <input type="range" id="length" min="8" max="64"
+                    value="16"></label>
         </div>
 
         <div class="checkboxes">
@@ -26,17 +29,15 @@
             <label><input type="checkbox" id="ambiguous"> Exclude Ambiguous</label>
         </div>
 
-        <button id="generate">Generate Password</button>
-
-        <div class="output">
-            <input type="text" id="password" readonly>
+        <div class="cnt-buttons">
+            <button id="generate">Generate Password</button>
             <button id="copy">Copy</button>
         </div>
 
         <div id="strength" class="strength"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
