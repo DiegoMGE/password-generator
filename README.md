@@ -17,7 +17,7 @@ Built during late-night coding sessions, today (September 1st) is the first rele
 
 ## Demo
 
-[Live Demo](https://github.com/DiegoMGE/password-generator)
+[Live Demo](https://itsmge.dev/portfolio/password-manager/)
 
 ---
 
