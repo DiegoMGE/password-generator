@@ -44,8 +44,12 @@ function calculateStrength(password) {
   if (/[0-9]/.test(password)) score++;
   if (/[^a-zA-Z0-9]/.test(password)) score++;
 
-  const levels = ["Very Weak", "Weak", "Fair", "Good", "Strong"];
-  return levels[score] || "Very Weak";
+  if (score <= 1) return "Very Weak";
+  if (score === 2) return "Weak";
+  if (score === 3) return "Fair";
+  if (score === 4) return "Good";
+  if (score === 5) return "Strong";
+  return "Unbreakable";
 }
 
 generateBtn.addEventListener("click", () => {
@@ -81,11 +85,10 @@ copyBtn.addEventListener("click", async () => {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       await navigator.clipboard.writeText(textToCopy);
     } else {
-      // ⚠️ Fallback para navegadores antiguos
+      // ⚠️ En caso se use un navegador muy antiguos
       passwordInput.select();
       document.execCommand("copy");
     }
-
     copyBtn.textContent = "Copied!";
     setTimeout(() => (copyBtn.textContent = "Copy"), 2000);
   } catch (err) {

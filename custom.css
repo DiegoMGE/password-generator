@@ -1,16 +1,19 @@
 /* Night coding session - Day 1 */
 * {
   box-sizing: border-box;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #1a1a1a;
   color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 15px;
+  min-height: 100dvh;
+  height: 100%;
 }
 
 .container {
@@ -101,4 +104,19 @@ button:hover {
 .cnt-buttons {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (min-width: 320px) {
+  .cnt-buttons {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+  .cnt-buttons {
+    gap: 2rem;
+  }
 }
